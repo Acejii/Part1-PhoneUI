@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Store</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/res.css" />
+  </head>
+  <body>
+    <div class="cover-page"></div>
+    <div class="menu-container">
+      <div class="cart-menu">
+        <div class="menu-quit">
+          <button class="quit-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="header">
+          <h1>Giỏ hàng</h1>
+        </div>
+
+        <div class="main">
+          <h4>
+            Hình như bạn quên bỏ sản phẩm vào đây? <br />
+            Trong này chả có gì cả!!!
+          </h4>
+        </div>
+        <div class="footer">
+          <div class="total">
+            <span style="font-weight: 600">Total: </span>
+            <span
+              id="total-price"
+              style="color: red; font-weight: 600; font-size: 18px"
+              >0 ₫</span
+            >
+          </div>
+          <div id="footer-btn">
+            <button id="buy-btn" class="footer-btn" btn-type="buy">
+              <span>Mua hàng</span>
+              <i style="color: #ccc" class="fa-solid fa-money-check-dollar"></i>
+            </button>
+            <button id="delele-btn" class="footer-btn" btn-type="delete">
+              <span>Xóa tất cả</span>
+              <i style="color: #ccc" class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-banner">
+      <img src="./assets/img/header-banner.png" width="100%" alt="Photo" />
+    </div>
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/img/logo.jpg" alt="Logo" />
+        </div>
+
+        <div class="phone-number">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:18005555"
+            >1800.5555 <br />
+            <p>Miễn phí</p>
+          </a>
+        </div>
+
+        <div class="search">
+          <input
+            id="product-search"
+            type="text"
+            placeholder="Bạn đang kiếm gì..."
+          />
+          <i
+            class="fa-solid fa-magnifying-glass"
+            onclick="handleSearchByMouse()"
+          ></i>
+        </div>
+
+        <div class="sign-in">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Đăng nhập</span>
+          </a>
+        </div>
+
+        <div class="discount">
+          <a href="https://fptshop.com.vn/khuyen-mai" target="_blank">
+            <i class="fa-solid fa-tags"></i>
+            <span>Khuyến mãi</span>
+          </a>
+        </div>
+
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping">
+            <p id="product-count">0</p>
+          </i>
+          <span>Giỏ hàng</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <div class="container">
+        <div class="title">
+          <h1>ĐIỆN THOẠI BÁN CHẠY</h1>
+          <div class="filter">
+            <i class="fa-solid fa-filter"></i>
+            <select name="brand" id="brand">
+              <option hidden value="">Lọc theo</option>
+              <option value="all">Tất cả</option>
+              <option value="iphone">Iphone</option>
+              <option value="samsung">Samsung</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div id="products-render" class="container"></div>
+
+          <div class="see-more">
+            <button id="more-products">
+              Xem tất cả sản phẩm
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="item flex">
+          <h3>THÔNG TIN</h3>
+          <a href="#">Hệ thống 31 Siêu thị (8:00-21:30)</a>
+          <a href="#">Giới thiệu công ty</a>
+          <a href="#">Tuyển dụng</a>
+          <a href="#">Phương thức thanh toán</a>
+        </div>
+
+        <div class="item flex">
+          <h3>Hỗ trợ khách hàng</h3>
+          <a href="#">Hướng dẫn mua hàng Online</a>
+          <a href="#">Mua hàng trả góp</a>
+          <a href="#">Chính sách bảo hành, đổi trả</a>
+          <a href="#">Giao hàng và lắp đặt</a>
+          <a href="#">Chính sách bảo mật TT cá nhân</a>
+          <a href="#">In hóa đơn điện tử</a>
+        </div>
+
+        <div class="item flex">
+          <h3>Tổng đài gọi hỗ trợ</h3>
+          <a href="#">Bán hàng: 1900 0001</a>
+          <a href="#">Bảo hành: 1900 0002</a>
+          <a href="#">Khiếu nại: 1900 0003</a>
+        </div>
+
+        <div class="item">
+          <h3>Theo dõi chúng tôi trên</h3>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><i class="fa-brands fa-youtube" style="color: red"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook" style="color: blue"></i
+          ></a>
+          <a href="https://www.tiktok.com/" target="_blank"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <h3 style="margin-top: 15px">Cập nhật ứng dụng trên Mobile</h3>
+          <a href="https://play.google.com/store" target="_blank"
+            ><img
+              src="./assets/img/appstore-logo.png"
+              alt="Photo"
+              width="180px"
+          /></a>
+          <a href="https://www.apple.com/vn/app-store/" target="_blank"
+            ><img
+              src="./assets/img/googleplay-logo.png"
+              alt="Photo"
+              width="180px"
+          /></a>
+        </div>
+      </div>
+      <div class="coppyright">
+        <p>
+          © 2018. Công ty cổ phần điện thoại. GPDKKD: 0303030303 do sở KH & ĐT
+          TP.HCM cấp ngày 21/03/2001. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và
+          Truyền Thông cấp ngày 23/12/2011.
+        </p>
+        <p>
+          Địa chỉ: 1000 Lê Đức Thọ, P. 16, Q.Gò Vấp, TP.Hồ Chí Minh. Điện thoại:
+          028 000001. Email: cskh@dienthoai.com.
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./models/Products.js"></script>
+    <script src="./services/productAPI.js"></script>
+    <script src="./controllers/main.js"></script>
+    <script src="./controllers/cart.js"></script>
+  </body>
+</html>

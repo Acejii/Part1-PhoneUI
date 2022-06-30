@@ -1,0 +1,86 @@
+@media screen and (max-width: 1200px) {
+  .content .container .main-content .container .row {
+    width: calc(100% / 3);
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #header .container .phone-number {
+    display: none;
+  }
+
+  #header .container .discount {
+    display: none;
+  }
+  .content .container .main-content .container {
+    padding: 0 56px;
+  }
+
+  .content .container .main-content .container .row {
+    width: 50%;
+    padding: 10px 30px;
+  }
+  .content .container .main-content .container .item {
+    height: 550px;
+    padding: 5px 20px 20px 20px;
+  }
+
+  footer .container {
+    flex-wrap: wrap;
+  }
+
+  footer .container .item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header .container .sign-in {
+    display: none;
+  }
+
+  .content .container .title h1 {
+    font-size: 20px;
+  }
+
+  #header .container .search {
+    width: 180px;
+  }
+  .content .container .main-content .container .row {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .content .container .main-content .container .item {
+    padding: 0 50px;
+  }
+  .content .container .main-content .container .item .item-img img {
+    width: 50%;
+  }
+  .menu-container .cart-menu .main .cart-item .button-control {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-container .cart-menu .main .cart-item {
+    padding: 24px 0;
+  }
+  .menu-container .cart-menu .main .cart-item .item-img {
+    display: none;
+  }
+  .menu-container .cart-menu .main .cart-item .quantity {
+    font-size: 13px;
+  }
+  .menu-container .cart-menu .main .cart-item .button-control {
+    width: 20px;
+    height: 20px;
+  }
+  .menu-container .cart-menu .main .cart-item .price {
+    font-size: 13px;
+  }
+  .menu-container .cart-menu .footer .footer-btn {
+    padding: 10px 20px !important;
+    font-size: 11px;
+  }
+}
