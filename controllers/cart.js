@@ -3,7 +3,9 @@ init();
 function init() {
   // get local storage
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
-
+  if (cartProducts.length === 0) {
+    cartDisplay(cartProducts);
+  }
   for (var i = 0; i < cartProducts.length; i++) {
     const cartProduct = cartProducts[i];
     cartProducts[i] = new Product(
@@ -203,6 +205,9 @@ function handleDeleteAll() {
 
 // Handle click buy-btn
 document.getElementById("buy-btn").addEventListener("click", () => {
+  if (cartProducts.length === 0) {
+    return;
+  }
   const count = document.getElementById("product-count");
   // gán lại cart thành mảng rỗng
   cartProducts = [];
