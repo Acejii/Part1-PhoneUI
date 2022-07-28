@@ -198,8 +198,10 @@ function handleDeleteAll() {
   // gán lại cart thành mảng rỗng
   cartProducts = [];
   localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  cartDisplay(cartProducts);
   // cập nhật lại biến đếm trên giỏ hàng
   count.innerHTML = cartProducts.length;
+
   handleCartProductsTotal();
 }
 
@@ -212,6 +214,7 @@ document.getElementById("buy-btn").addEventListener("click", () => {
   // gán lại cart thành mảng rỗng
   cartProducts = [];
   localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  cartDisplay(cartProducts);
   // cập nhật lại biến đếm trên giỏ hàng
   count.innerHTML = cartProducts.length;
   document.getElementById("total-price").innerHTML = `0 ₫`;
