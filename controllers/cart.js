@@ -3,6 +3,7 @@ init();
 function init() {
   // get local storage
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
+
   for (var i = 0; i < cartProducts.length; i++) {
     const cartProduct = cartProducts[i];
     cartProducts[i] = new Product(

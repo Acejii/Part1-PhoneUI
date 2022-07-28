@@ -527,6 +527,7 @@ button {
 }
 
 footer {
+  background-color: #fff;
   width: 100%;
   padding: 40px 20px;
   -webkit-box-shadow: 0 0 1px #ccc;
