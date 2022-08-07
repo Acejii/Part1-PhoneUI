@@ -12,10 +12,27 @@ function apiGetProducts(search) {
 }
 
 //  GET API theo ID
-function apiGetProductId(productId) {
+function apiGetProductDetail(productId) {
   return axios({
     url: `${baseURL}/${productId}`,
     method: "GET",
+  });
+}
+
+// Hàm call API thêm sản phẩm
+function apiAddProduct(product) {
+  return axios({
+    url: baseURL,
+    method: "POST",
+    data: product,
+  });
+}
+
+// Hàm call API xoá sản phẩm
+function apiDeleteProduct(productId) {
+  return axios({
+    url: `${baseURL}/${productId}`,
+    method: "DELETE",
   });
 }
 

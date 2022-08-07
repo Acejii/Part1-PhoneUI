@@ -237,7 +237,7 @@ document.querySelector(".cover-page").addEventListener("click", (e) => {
 let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
 function handleClickAdd(productId) {
   // CallAPI lấy ra sp theo ID
-  apiGetProductId(productId).then((result) => {
+  apiGetProductDetail(productId).then((result) => {
     let product = result.data;
     product = new Product(
       product.id,

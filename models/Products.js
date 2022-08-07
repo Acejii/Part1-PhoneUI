@@ -9,7 +9,7 @@ class Product {
     img,
     desc,
     type,
-    quantity
+    quantity = 1
   ) {
     this.id = id;
     this.name = name;
